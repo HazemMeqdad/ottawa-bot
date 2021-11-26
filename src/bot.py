@@ -127,7 +127,7 @@ def interactions():
                     "embeds": [
                         {
                             "description":  "Ottawa bot can help with some programming order like search in npmjs.com & pypi.org and more in future." 
-                                            "\nOpen source: https://github.com/Team-Ottawa/OT_Bot" 
+                                            "\nOpen source: https://github.com/HazemMeqdad/ottawa-bot" 
                                             "\nSupport server: https://discord.gg/VcWRRphVQB" 
                                             "\nCreatore by: ottawa team & HAZEM"
                             
@@ -149,7 +149,7 @@ def interactions():
             return jsonify({
                 "type": InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
                 "data": {
-                    "content": "https://github.com/Team-Ottawa/OT_Bot",
+                    "content": "https://github.com/HazemMeqdad/ottawa-bot",
                 }
             })
 
