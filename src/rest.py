@@ -5,9 +5,9 @@ import requests
 from .enums import ApplicationCommandTypes
 
 
-TOKEN = os.environ.get("TOKEN")
 BASE = "https://discord.com/api/v9"
 
+TOKEN = os.environ.get("TOKEN")
 application_id = os.environ.get("CLIENT_ID")
 guild_id = os.environ.get("GUILD_ID")
 
@@ -55,7 +55,7 @@ def delete_command(command_id, /):
 
 
 def edit_command(command_id, **kwargs: Any):
-    data = {item: value for item, value in kwargs if item in [
+    data = {item: value for item, value in kwargs.items() if item in [
         "name", "description", "options"]}
     return request(
         "PATCH",
