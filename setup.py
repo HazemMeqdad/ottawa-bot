@@ -7,7 +7,7 @@ from src import rest
 
 
 commands = requests.get(
-    "https://gist.githubusercontent.com/HazemMeqdad/432d6712e19e3007756e94130eb46891/raw/1c56a305a7b0eebc9d4011cc600374975db42158/commands.json").json()
+    "https://gist.githubusercontent.com/HazemMeqdad/432d6712e19e3007756e94130eb46891/raw/38aa8e76030b782957e72aedf1f022ce295603d9/commands.json").json()
 application_id = os.environ.get("CLIENT_ID")
 
 globles_command = ["ping", "source", "invite", "pypi", "npm", "help"]
