@@ -1,7 +1,7 @@
 import os
 from flask import Blueprint, jsonify, request
 from discord_interactions import InteractionResponseFlags, InteractionResponseType, verify_key_decorator, InteractionType
-import rest
+from . import rest
 
 
 interaction = Blueprint("interaction", "bot")
