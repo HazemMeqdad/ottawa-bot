@@ -205,36 +205,35 @@ def interactions():
             package: dict = res["info"]
             description = package["description"].replace("```", "") if len(
                 package["description"]) >= 500 else package["description"][:500]+"...".replace("```", "")
-            resp = {
-                "embeds": [
-                    {
-                        "title": package.get("name")+f"`({package.get('version')})`",
-                        "url": package.get("package_url"),
-                        "description": f"```md\n{description}\n```",
-                        "fields": [
-                            {
-                                "name": "Author",
-                                "value": package.get("author") or "Nothing"
-                            },
-                            {
-                                "name": "Documentation",
-                                "value": package.get("project_urls").get("Documentation") or "Nothing"
-                            },
-                            {
-                                "name": "Home page",
-                                "value": package.get("project_urls").get("Homepage") or "Nothing"
-                            },
-                            {
-                                "name": "Releases length",
-                                "value": str(len(res.get("releases"))) or "Nothing"
-                            }
-                        ]
-                    }
-                ]
-            }
             return jsonify({
                 "type": InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-                "data": resp
+                "data": {
+                    "embeds": [
+                        {
+                            "title": package.get("name")+f"`({package.get('version')})`",
+                            "url": package.get("package_url"),
+                            "description": f"```md\n{description}\n```",
+                            "fields": [
+                                {
+                                    "name": "Author",
+                                    "value": package.get("author") or "Nothing"
+                                },
+                                {
+                                    "name": "Documentation",
+                                    "value": package.get("project_urls").get("Documentation") or "Nothing"
+                                },
+                                {
+                                    "name": "Home page",
+                                    "value": package.get("project_urls").get("Homepage") or "Nothing"
+                                },
+                                {
+                                    "name": "Releases length",
+                                    "value": str(len(res.get("releases"))) or "Nothing"
+                                }
+                            ]
+                        }
+                    ]
+                }
             })
 
         elif data["name"] == "npm":
