@@ -1,19 +1,16 @@
-from enum import Enum
-
-
-class ComponentTypes(Enum):
+class ComponentTypes:
     ACTION_ROW = 1
     BUTTON = 2
     SELECT_MENU = 3
 
 
-class ApplicationCommandTypes(Enum):
+class ApplicationCommandTypes:
     CHAT_INPUT = 1
     USER = 2
     MESSAGE = 3
 
 
-class ButtonStyles(Enum):
+class ButtonStyles:
     PRIMARY = 1
     SECONDARY = 2
     SUCCRSS = 3

@@ -20,14 +20,20 @@ def interactions():
                 "data": {
                     "content": "pong",
                     "components": [
+
                         {
-                            "type": ComponentTypes.BUTTON,
-                            "custom_id": "pong",
-                            "style": ButtonStyles.PRIMARY,
-                            "emoji": {
-                                "id": None, 
-                                "name": "🏓"
-                            }
+                            "type": ComponentTypes.ACTION_ROW,
+                            "components": [
+                                {
+                                    "type": ComponentTypes.BUTTON,
+                                    "custom_id": "pong",
+                                    "style": 1,
+                                    "emoji": {
+                                        "id": None,
+                                        "name": "🏓"
+                                    }
+                                }
+                            ]
                         }
                     ]
                 }
