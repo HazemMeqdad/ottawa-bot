@@ -1,13 +1,14 @@
 from __future__ import annotations
+import os
+from typing import Any
 import requests
-import config
 
 
-TOKEN = config.TOKEN
+TOKEN = os.environ.get("TOKEN")
 BASE = "https://discord.com/api/v9"
 
 
-def request(method: str, rout: str, *args, **kwargs) -> dict | None:
+def request(method: str, rout: str, *args, **kwargs) -> dict | None | Any:
     re = requests.request(
         method, 
         BASE+rout,
