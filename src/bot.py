@@ -259,15 +259,15 @@ def interactions():
                             "fields": [
                                 {
                                     "name": "Author",
-                                    "value": npm["publisher"]["username"]
+                                    "value": npm.get("publisher").get("username") or "Nothing"
                                 },
                                 {
                                     "name": "Home page",
-                                    "value": npm["links"]["homepage"]
+                                    "value": npm.get("links").get("homepage") or "Nothing"
                                 },
                                 {
                                     "name": "repository",
-                                    "value": npm["links"]["repository"]
+                                    "value": npm.get("links").get("repository") or "Nothing"
                                 },
                                 {
                                     "name": "Releases length",
