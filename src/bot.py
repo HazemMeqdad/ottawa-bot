@@ -74,10 +74,12 @@ def interactions():
             })
 
         elif data["name"] == "profile":
-            start = time.monotonic()
             user_id = list(data["resolved"]["users"].keys())[0]
             user = data["resolved"]["users"][user_id]
-            x = Users(int(user_id)).info
+            x = Users(int(user_id))
+            if not x.info:
+                x.insert(user["username"])
+            x = x.info
             user_avatar = "https://discord.com/assets/6f26ddd1bf59740c536d2274bb834a05.png"
             if user.get("avatar"):
                 user_avatar = f"https://cdn.discordapp.com/avatars/{user_id}/{user['avatar']}.gif" \

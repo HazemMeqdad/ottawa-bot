@@ -34,7 +34,6 @@ class Users:
     @property
     def info(self):
         x = col_users.find_one({"_id": self.id})
-        print(x)
         return x
 
     def _all(self, module: str):
