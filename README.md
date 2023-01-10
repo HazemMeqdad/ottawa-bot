@@ -16,8 +16,8 @@
 
 ## Run
 
-- you can use [reqlit.com](https://replit.com) to host the interactions server but you need to uptime the project can use [uptimerobot](https://uptimerobot.com/) <br>
-- if you don't like use [reqlit.com](https://replit.com) i will suggestions more hosting:
+- you can use [replit.com](https://replit.com) to host the interactions server but you need to uptime the project can use [uptimerobot](https://uptimerobot.com/) <br>
+- if you don't like use [replit.com](https://replit.com) i will suggestions more hosting:
     - [heroku](https://www.heroku.com/)
     - [platform](https://platform.sh/marketplace/python/)
     - [glitch](https://glitch.com/)
